@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>フェイクウイルス警告サイト</title>
+    <title>フェイクウィルズ警告サイト</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
@@ -16,7 +16,6 @@
             color: #636b6f;
             font-family: 'Hiragino Kaku Gothic Pro';
             font-weight: 200;
-            height: 100vh;
             margin: 0;
         }
 
@@ -26,6 +25,7 @@
 
         .title {
             font-size: 24px;
+            margin: 10px 0;
         }
 
         .links > a {
@@ -42,10 +42,10 @@
             background-color: #0055e3;
             color: #FFFFFF;
             border-radius: 30px;
-            display: inline-block;
             font-size: 12px;
             font-weight: normal;
-            width: 200px;
+            margin: 20px;
+            width: 180px;
             height: 42px;
         }
 
@@ -80,10 +80,7 @@
     </div>
 
     <div>
-        お使いの<?php echo $deviceName; ?>（IPアドレス:<?php echo $_SERVER["REMOTE_ADDR"] ; ?>）のウィルズ感染が検出されました。以下の対策を取ってください。
-    </div>
-
-    <div>
+        お使いの<?php echo $deviceName; ?>（IPアドレス:<?php echo $ip; ?>）のウィルズ感染が検出されました。以下の対策を取ってください。<br><br>
         ※ このサイトはジョークサイトです。本当には感染していないのでご安心ください。
     </div>
 
