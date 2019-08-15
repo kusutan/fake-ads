@@ -68,7 +68,9 @@
             }
             $matches = array();
             preg_match('/Android [0-9A-Za-z.\;\-\_\s]+; ([0-9A-Za-z\-\_ \/]+) /i', $ua, $matches);
-
+            if (! $matches) {
+                preg_match('/Android [0-9A-Za-z.\;\-\_\s]+; ([0-9A-Za-z\-\_ \/]+)\)/i', $ua, $matches);
+            }
             $deviceName     = isset($matches[1]) ? $matches[1] : "";
         } elseif (preg_match("/iPhone/i", $ua))  {
             $deviceName     = "iPhone";
