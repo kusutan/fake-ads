@@ -77,6 +77,12 @@
         } elseif (preg_match("/iPad/i", $ua))  {
             $deviceName     = "iPad";
         }
+        if (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+            $ipArray = explode(',', $_SERVER['HTTP_X_FORWARDED_FOR']);
+            $ip = $ipArray[0];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
         ?>
         <?php echo $deviceName; ?>でウィルズが<?php echo mt_rand(1, 8); ?>個検出されました。
     </div>
