@@ -12,7 +12,7 @@
     <!-- Styles -->
     <style>
         html, body {
-            background-color: #f00;
+            background-color: #fff;
             color: #636b6f;
             font-family: 'Hiragino Kaku Gothic Pro';
             font-weight: 200;
